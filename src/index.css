@@ -13,9 +13,11 @@
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  min-width: 300px;
 }
 
 header {
+  max-width: 750px;
   margin: 2rem;
   padding: 0.75rem 0.75rem 0.75rem 1.5rem;
   border: 3px solid hsl(217, 16%, 45%);
@@ -57,6 +59,8 @@ header h1 {
 
 main {
   width: 90%;
+  min-width: 300px;
+  max-width: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -185,6 +189,7 @@ footer h1 {
 
 .playing {
   width: 90%;
+  max-width: 750px;
 }
 
 .battle {
@@ -243,4 +248,74 @@ footer h1 {
   background: transparent;
   color: white;
   box-shadow: 0px 0px 0px 1px white;
+}
+
+@media screen and (min-width: 550px){
+  .app {
+    justify-content: flex-start;
+  }
+  main {
+    background-position-y: center;
+    margin-top: 15vh;
+  }
+
+  .playing {
+    margin-top: 15vh;
+  }
+
+  .paper, .scissors, .rock {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  img{
+    transform: scale(1.2);
+  }
+
+  footer {
+    margin: 0;
+    position: absolute;
+    right: 3vw;
+    bottom: 3vw;
+  }
+
+  .rules-page {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    justify-content: flex-start;
+  }
+
+  .rules-page h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .rules-page p {
+    margin-top: 15px;
+  }
+
+  .beats {
+   margin-top: 90px;
+  }
+
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .result {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 }
